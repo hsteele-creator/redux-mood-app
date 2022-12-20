@@ -5,25 +5,25 @@ const angry = document.querySelector("#angry")
 const confused = document.querySelector("#confused")
 
 happy.addEventListener("click", function () {
-    store.dispatch({type: "HAPPY", payload: "^ㅂ^"});
+    store.dispatch({type: "CHANGE_MOOD", payload: "^ㅂ^"});
     const state = store.getState()
     mood.innerText = state.image
 });
 
 sad.addEventListener("click", function () {
-    store.dispatch({type: "SAD", payload: "⊙︿⊙"})
+    store.dispatch({type: "CHANGE_MOOD", payload: "⊙︿⊙"})
     const state = store.getState()
     mood.innerText = state.image
 })
 
 angry.addEventListener("click", function () {
-    store.dispatch({type: "ANGRY", payload: "ಠ_ಠ"})
+    store.dispatch({type: "CHANGE_MOOD", payload: "ಠ_ಠ"})
     const state = store.getState()
     mood.innerText = state.image
 })
 
 confused.addEventListener("click", function () {
-    store.dispatch({type: "CONFUSED", payload: "⊙.☉"})
+    store.dispatch({type: "CHANGE_MOOD", payload: "⊙.☉"})
     const state = store.getState()
     mood.innerText = state.image
 })
